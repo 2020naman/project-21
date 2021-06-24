@@ -22,15 +22,15 @@ function setup() {
 
 	//Create the Bodies Here.
     ground = new Ground(width/2,670,width,20);
-    leftSide=new Ground(800,600,20,120);
-	rightSide=new Ground(1100,600,20,120)
+    leftSide=new Ground(800,600,20,150);
+	rightSide=new Ground(1130,600,20,150)
     
 
     var ball_options={
       isStatic: false,
-	  restitution: 0.3,
+	  restitution: 0.03,
       friction: 0,
-	  density: 0.8
+	  density: 1.2
 	  
 	}
     fill("white");
@@ -67,7 +67,7 @@ ball.collide=true;
 function throwBall(){
   if(keyCode === UP_ARROW){
 
-	Matter.Body.applyForce(ball,{x:0,y:0},{x:10,y:-0.8})
+	Matter.Body.applyForce(ball,{x:0,y:0},{x:15,y:-0.02})
   }	
 }
 
